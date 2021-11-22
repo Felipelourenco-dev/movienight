@@ -1,7 +1,7 @@
 # MovieNight
 
  Projeto feito para solidificar conhecimentos sobre! <br /> <br/>
- **API com axios** <br/>
+ **consumo de API com axios** <br/>
  **React Router**<br/>
  **Components** <br/>
  **Hooks**
