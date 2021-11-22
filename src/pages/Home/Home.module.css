@@ -44,3 +44,10 @@
   filter: blur(0.5);
   border-color: #000000;
 }
+
+@media(max-width:767px){
+  .imageCard{
+    width: 100%;
+    max-width: 360px;
+  }
+}

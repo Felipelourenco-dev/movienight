@@ -84,3 +84,32 @@
   text-align: center;
   letter-spacing: 1.2px;
 }
+
+@media(max-width: 767px){
+  .title{
+    font-size: 1.3rem;
+  }
+
+  .imageBanner{
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+  }
+  .TitleSinopse{
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .textSinopse{
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+  }
+  .containerButtons{
+    max-width: 360px;
+  }
+
+  .container{
+    margin-top: 2rem;
+  }
+}
