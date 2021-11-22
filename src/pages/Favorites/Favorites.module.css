@@ -75,3 +75,16 @@
     text-align: center;
   }
 }
+
+@media(max-width: 360px){
+  .container{
+    max-width: 345px;
+  }
+  .titleContent{
+    font-size: 14px;
+  }
+  .linkContent{
+    font-size: 12px;
+  }
+ 
+}

@@ -113,3 +113,14 @@
     margin-top: 2rem;
   }
 }
+
+@media(max-width: 360px){
+
+  .textSinopse{
+    font-size: 12px !important;
+    max-width: 320px;
+  }
+  .containerButtons{
+    max-width: 320px;
+  }
+}
