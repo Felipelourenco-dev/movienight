@@ -1,8 +1,22 @@
 import React,{useEffect, useState} from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
-import Loading from '../Loading'
+import Loading from '../../utils/Loading'
 import api from '../../services/api'
 import styles from './Movie.module.css'
+import { ToastContainer, toast } from 'react-toastify';
+
+
+<ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
 
 const Movie = () => {
   const { id } = useParams();
@@ -29,6 +43,32 @@ const Movie = () => {
 
   },[id, navigate]);
 
+  function saveMovie(){
+   const listMovies = localStorage.getItem('movies');
+
+   let savedMovies = JSON.parse(listMovies) || [];
+
+   //Verificando se já existe esse filme salvo!
+   const hasMovie = savedMovies.some((savedMovie) => savedMovie.id === movies.id );
+
+   if(hasMovie){
+     toast.warning('Este filme já está salvo');
+     return
+   }
+
+   savedMovies.push(movies);
+   localStorage.setItem('movies', JSON.stringify(savedMovies))
+   toast.success('Filme salvo com sucesso', {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+  }
+
   
   return (
 
@@ -51,7 +91,7 @@ const Movie = () => {
       </div>
       <span className={styles.textSinopse}>{movies?.sinopse}</span>
       <div className={styles.containerButtons}>
-        <button className={styles.buttonFavorites} onClick={()=>{}}>Favoritar</button>
+        <button className={styles.buttonFavorites} onClick={saveMovie}>Favoritar</button>
         <a className={styles.buttonTrailer} target="blank" href={`https://www.youtube.com/results?search_query=${movies?.nome} Trailer`}>Trailer</a>
       </div>
     </div>

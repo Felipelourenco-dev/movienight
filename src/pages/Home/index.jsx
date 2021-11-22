@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import Loading from '../Loading'
+import Loading from '../../utils/Loading'
 import {Link} from 'react-router-dom'
 import api from '../../services/api'
 import styles from './Home.module.css'

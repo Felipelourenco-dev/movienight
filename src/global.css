@@ -1,6 +1,16 @@
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+.Toastify__toast-theme--light{
+  background: #4e4c4c;
+  color: #FFFFFF;
+}
+
+.Toastify__progress-bar-theme--light{
+  background: #FFFFFF;
 }

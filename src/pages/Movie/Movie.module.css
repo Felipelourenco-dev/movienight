@@ -62,6 +62,12 @@
    text-transform: lowercase;
    letter-spacing: 1.2px;
 
+   transition: filter 0.2s;
+
+ }
+ .buttonFavorites:hover{
+   cursor: pointer;
+   filter: blur(0.8);
  }
  .buttonTrailer{
   width: 100%;

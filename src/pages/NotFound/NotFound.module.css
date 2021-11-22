@@ -1,0 +1,42 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.title{
+  font-size: 3rem;
+  text-transform: uppercase;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    height: 45px;
+    padding: 8px;
+    margin-top: 20px;
+
+    color: #FFFFFF;
+    background-color: #c0392b;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    text-transform: lowercase;
+    letter-spacing: 1.2px;
+ 
+    transition: filter 0.2s;
+ 
+  }
+  .link:hover{
+    cursor: pointer;
+    filter: blur(0.8);
+    letter-spacing: 1.5px;
+  }
